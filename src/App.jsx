@@ -1,13 +1,17 @@
 import { useState } from 'react'
+import {todos} from './todo.json'
+import Main from './components/Main'
+import Aside from './components/Aside'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [todo, setTodo] = useState(todos)
 
   return (
-    <>
-     <p>React Todo Project</p>
-    </>
+    <div className='project-wrapper'>
+    <Main todo={todo} />
+    <Aside/>
+    </div>
   )
 }
 

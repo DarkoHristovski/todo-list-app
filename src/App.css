@@ -1,1 +1,24 @@
 body{box-sizing: border-box;}
+
+.project-wrapper{
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 100%;
+  min-height: 100vh;
+}
+
+.aside,.main{
+  border: 1px solid black;
+}
+
+.todo-item{
+  border: 1px solid black;
+  padding: 20px;
+  min-height: 200px;
+}
+
+.main{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
