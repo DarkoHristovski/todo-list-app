@@ -1,6 +1,6 @@
 const Aside = () =>{
     return(
-        <div className="aside">aecwfwee</div>
+        <aside className="aside">aside</aside>
     )
 }
 
