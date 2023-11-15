@@ -1,9 +1,10 @@
 import TodoItem from './TodoItem';
 
 const Main = ({todo}) =>{
-  return ( <div className="main">
+  return ( 
+  <main className="main">
   {todo.map(x=> <TodoItem key={x.id} content={x}/>)}
-   </div>)
+   </main>)
 }
 
 export default  Main
