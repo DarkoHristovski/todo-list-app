@@ -11,6 +11,7 @@ h1,h2,h3,h4,h5,h6,p{
 .project-wrapper{
   display: grid;
   grid-template-columns: 20% 80%;
+  display: flex;
   min-height: 100vh;
   position: relative;
 }
@@ -18,6 +19,7 @@ h1,h2,h3,h4,h5,h6,p{
 .aside{
   background: #364a6c;
   color:#fff;
+  width: 100%;
 }
 
 .todo-item{
@@ -32,11 +34,16 @@ h1,h2,h3,h4,h5,h6,p{
 .main{
   background-color: #f7f8fa;
   color:#000;
+  text-align: center;
+  padding: 20px; 
+  width: 100%;
+}
+.main-wrapper{
+  grid-gap: 10px;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
-  padding: 20px;
-  
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-flow: dense;
 }
 
 .card{
@@ -121,20 +128,23 @@ width: 100%;
 
 
 @media only screen and (max-width: 1380px){
-  .main {
+  .main-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
 
 }
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px) and (min-width:768px){
   .project-wrapper {
     grid-template-columns: 15% 85%;
 }
 }
 
-@media only screen and (max-width: 660px){
-  .main {
+
+
+
+@media only screen and (max-width: 767px){
+  .main-wrapper {
     grid-template-columns: 1fr 1fr;
 }
 }
