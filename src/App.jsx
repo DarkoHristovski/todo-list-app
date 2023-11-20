@@ -20,6 +20,7 @@ function App() {
 
   
     let importFilter = todo.filter(x=>x.important);
+    let completeFilter = todo.filter(x=>x.completed);
   
   
   
@@ -43,7 +44,7 @@ function App() {
         <AddTodo saveTasks={saveTasks} popUpSwitchOff={popUpSwitchOff} />
       )}
       <Aside  popUpSwitchOff={popUpSwitchOff} popUpSwitchOn={popUpSwitchOn} />
-      <Main importFilter={importFilter} editTask={editTask} popUpSwitchOff={popUpSwitchOff} popUpSwitchOn={popUpSwitchOn} deleteTask={deleteTask} todo={todo} setTodo={setTodo} />
+      <Main completeFilter={completeFilter} importFilter={importFilter} editTask={editTask} popUpSwitchOff={popUpSwitchOff} popUpSwitchOn={popUpSwitchOn} deleteTask={deleteTask} todo={todo} setTodo={setTodo} />
     </div>
   );
 }

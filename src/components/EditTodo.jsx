@@ -29,10 +29,10 @@ let onChangeValue=(e)=>{
   return (
     <PopUp>
      <div className="card-top">
-      <h2>Add a Task</h2>
+     <h2>Edit a Task</h2>
       <i onClick={()=> setEditPopUp(false)} className="close-btn fa-solid fa-x fa-2xl"></i>
       </div>
-      <h2>Edit a Task</h2>
+      
       <form onSubmit={EditTaskHandler} action="/">
         <input
           type="text"

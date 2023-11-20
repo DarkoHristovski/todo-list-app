@@ -5,6 +5,7 @@ const Aside = ({ popUpSwitchOn }) => {
   return (
     <aside className="aside">
       <div class="aside-content">
+        <h2>Todo list</h2>
       <button onClick={popUpSwitchOn} type="button">
         Add a Task
       </button>
