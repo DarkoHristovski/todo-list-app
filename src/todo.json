@@ -4,80 +4,80 @@
         "id": 1,
         "task": "Complete work project",
         "description":"This is the description of the task",
-        "dueDate": "2023-12-15",
-        "priority": "High",
-        "completed": false
+        "date": "2023-12-15",
+        "important": false,
+        "completed": true
       },
       {
         "id": 2,
         "task": "Read a chapter of a book",
         "description":"This is the description of the task",
-        "dueDate": "2023-11-20",
-        "priority": "Medium",
+        "date": "2023-11-20",
+        "important": false,
         "completed": false
       },
       {
         "id": 3,
         "task": "Go for a 30-minute run",
         "description": "This is the description of the task",
-        "dueDate": "2023-11-16",
-        "priority": "High",
+        "date": "2023-11-16",
+        "important": false,
         "completed": true
       },
       {
         "id": 4,
         "task": "Attend a meeting at 2 PM",
         "description" : "This is the description of the task",
-        "dueDate": "2023-11-16",
-        "priority": "Medium",
+        "date": "2023-11-16",
+        "important": false,
         "completed": false
       },
       {
         "id": 5,
         "task": "Buy birthday gift for a friend",
         "description":"This is the description of the task",
-        "dueDate": "2023-11-25",
-        "priority": "Low",
+        "date": "2023-11-25",
+        "important": false,
         "completed": false
       },
       {
         "id": 6,
         "task": "Review and organize emails",
         "description":"This is the description of the task",
-        "dueDate": "2023-11-30",
-        "priority": "Low",
+        "date": "2023-11-30",
+        "important": true,
         "completed": true
       },
       {
         "id": 7,
         "task": "Plan weekend activities",
         "description":"This is the description of the task",
-        "dueDate": "2023-11-30",
-        "priority": "Medium",
+        "date": "2023-11-30",
+        "important": true,
         "completed": false
       },
       {
         "id": 8,
         "task": "Learn a new recipe and cook dinner",
         "description":"This is the description of the task",
-        "dueDate": "2023-11-18",
-        "priority": "High",
+        "date": "2023-11-18",
+        "important": "false",
         "completed": false
       },
       {
         "id": 9,
-        "description":"This is the description of the task",
         "task": "Update resume",
-        "dueDate": "2023-11-30",
-        "priority": "Medium",
+        "description":"This is the description of the task",
+        "date": "2023-11-30",
+        "important": "false",
         "completed": true
       },
       {
         "id": 10,
         "task": "Practice meditation for 15 minutes",
         "description":"This is the description of the task",
-        "dueDate": "2023-11-30",
-        "priority": "Low",
+        "date": "2023-11-30",
+        "important": "false",
         "completed": false
       }
     ]
