@@ -3,6 +3,9 @@ box-sizing: border-box;
 margin: 0;
 padding: 0;
 }
+html,body, #root, .project-wrapper main aside{
+  height: 100%;
+}
 
 h1,h2,h3,h4,h5,h6,p{
   margin: 0;
@@ -11,15 +14,60 @@ h1,h2,h3,h4,h5,h6,p{
 .project-wrapper{
   display: grid;
   grid-template-columns: 20% 80%;
-  display: flex;
-  min-height: 100vh;
+  height: 100%;
   position: relative;
 }
 
 .aside{
-  background: #364a6c;
+  background:#007bff;
   color:#fff;
   width: 100%;
+}
+
+.aside-content{
+  position: sticky;
+    top: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aside-content button{
+  width: 90%;
+  background-color: #fff;
+  color: #007bff;
+  border: 1px solid #fff;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .2s ease-out;
+}
+
+
+
+.aside-content button:hover{
+  background-color: #007bff;
+  color:#fff; 
+}
+
+.aside-content nav{
+  margin-top: 80px;
+  width: 100%;
+}
+
+.aside-content nav li{
+  width:100%;
+  background-color: #f7f8fa;
+  list-style: none;
+border:1px solid #007bff;
+}
+
+.aside-content nav li a{
+display: block;
+text-decoration: none;
+padding: 20px 10px;
+color:  #007bff;
 }
 
 .todo-item{
@@ -42,14 +90,14 @@ h1,h2,h3,h4,h5,h6,p{
   grid-gap: 10px;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
   grid-auto-flow: dense;
 }
 
 .card{
   color: #364a6c;
   background-color:#fff;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 30px 20px;
   display: flex;
   justify-content: space-between;
@@ -88,10 +136,26 @@ width: 100%;
   width: 100%;
 }
 
+.pop-up form input[type='text']{
+  height: 10px;
+}
+
 .checkbox-wrapper{
   display: flex;
 }
 
+.overlay .card {
+  width: 500px;
+}
+
+
+
+.overlay .card-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
 
 .complete-btn{
   color: #fff;
@@ -125,6 +189,36 @@ width: 100%;
   stroke:red;
 }
 
+.close-btn{
+  cursor: pointer;
+}
+
+
+.overlay textarea,
+.overlay input,
+.overlay button {
+    padding: 20px 10px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    font-size: 20px;
+}
+
+.overlay textarea {
+  resize: none;
+}
+.overlay label{
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.overlay textarea,
+.overlay input{
+  margin-bottom: 20px;
+}
+
+.overlay button{
+  cursor: pointer;
+}
 
 
 @media only screen and (max-width: 1380px){

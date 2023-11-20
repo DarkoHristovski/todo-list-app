@@ -6,7 +6,7 @@ import { useState } from "react";
 import Card from "../UI/Card";
 import EditTodo from "./EditTodo";
 
-const TodoItem = ({ content, deleteTask, editTask, setTodo }) => {
+const TodoItem = ({ content, deleteTask, editTask, setTodo, popUpSwitchOff }) => {
   const [editPopUp, setEditPopUp] = useState(false);
   const [completed, setCompleted] = useState(content.completed);
   const [important, setImportant] = useState(content.important);
@@ -47,6 +47,7 @@ const TodoItem = ({ content, deleteTask, editTask, setTodo }) => {
     <Card>
       {editPopUp && (
         <EditTodo
+        popUpSwitchOff={popUpSwitchOff}
           setEditPopUp={setEditPopUp}
           editTask={editTask}
           content={content}

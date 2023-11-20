@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import PopUp from "../UI/PopUp";
 
-const EditTodo = ({content, editTask,setEditPopUp}) => {
+const EditTodo = ({content, editTask,setEditPopUp,popUpSwitchOff}) => {
     const[value,setValue] = useState({
       task:content.task,
       description:content.description,
@@ -27,10 +28,10 @@ let onChangeValue=(e)=>{
   };
   return (
     <PopUp>
-      
-      <button type="button" className="add">
-        Cancel
-      </button>
+     <div className="card-top">
+      <h2>Add a Task</h2>
+      <i onClick={()=> setEditPopUp(false)} className="close-btn fa-solid fa-x fa-2xl"></i>
+      </div>
       <h2>Edit a Task</h2>
       <form onSubmit={EditTaskHandler} action="/">
         <input
