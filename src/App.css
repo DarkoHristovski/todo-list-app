@@ -1,24 +1,140 @@
-body{box-sizing: border-box;}
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+}
 
 .project-wrapper{
   display: grid;
-  grid-template-columns: 80% 20%;
-  grid-template-rows: 100%;
+  grid-template-columns: 20% 80%;
   min-height: 100vh;
+  position: relative;
 }
 
-.aside,.main{
-  border: 1px solid black;
+.aside{
+  background: #364a6c;
+  color:#fff;
 }
 
 .todo-item{
-  border: 1px solid black;
-  padding: 20px;
   min-height: 200px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+ 
 }
 
 .main{
+  background-color: #f7f8fa;
+  color:#000;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
+  padding: 20px;
+  
+}
+
+.card{
+  color: #364a6c;
+  background-color:#fff;
+  border-radius: 6px;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-self: baseline;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+} 
+
+.todo-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pop-up{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pop-up form{
+  display: flex;
+  flex-direction: column;
+width: 100%;
+}
+
+.pop-up form input[type='text'],
+.pop-up form textarea,
+.pop-up form button{
+  width: 100%;
+}
+
+.checkbox-wrapper{
+  display: flex;
+}
+
+
+.complete-btn{
+  color: #fff;
+  padding: 7px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.complete{
+  background-color: green;
+}
+
+.not-complete{
+  background-color: red;
+}
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+}
+.btn-wrapper button{
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 5px;
+}
+.import-active svg{
+  fill: red;
+  stroke:red;
+}
+
+
+
+@media only screen and (max-width: 1380px){
+  .main {
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+}
+
+@media only screen and (max-width: 1024px){
+  .project-wrapper {
+    grid-template-columns: 15% 85%;
+}
+}
+
+@media only screen and (max-width: 660px){
+  .main {
+    grid-template-columns: 1fr 1fr;
+}
 }
