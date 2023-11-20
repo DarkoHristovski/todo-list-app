@@ -43,7 +43,7 @@ function App() {
         <AddTodo saveTasks={saveTasks} popUpSwitchOff={popUpSwitchOff} />
       )}
       <Aside  popUpSwitchOff={popUpSwitchOff} popUpSwitchOn={popUpSwitchOn} />
-      <Main importFilter={importFilter} editTask={editTask} popUpSwitchOn={popUpSwitchOn} deleteTask={deleteTask} todo={todo} setTodo={setTodo} />
+      <Main importFilter={importFilter} editTask={editTask} popUpSwitchOff={popUpSwitchOff} popUpSwitchOn={popUpSwitchOn} deleteTask={deleteTask} todo={todo} setTodo={setTodo} />
     </div>
   );
 }

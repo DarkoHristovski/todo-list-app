@@ -20,19 +20,22 @@ let saveTaskValue = (e) =>{
         description:descriptionValue,
     }
      saveTasks(newObj);
-
+popUpSwitchOff()
 }
 
   return (
     <PopUp>
-      <button onClick={popUpSwitchOff} type="button" className="add">
-        Cancel
-      </button>
+      <div className="card-top">
       <h2>Add a Task</h2>
+      <i onClick={popUpSwitchOff} className="close-btn fa-solid fa-x fa-2xl"></i>
+      </div>
       <form onSubmit={saveTaskValue} action="/">
-        <input type="text" name="title" onChange={onChangeTaskValue} />
-        <textarea name="description" onChange={onChangeDescritionValue}  id="description" cols="30" rows="10"></textarea>
+      <label htmlFor="task">Title</label>
+        <input placeholder="e.g, study for the test" type="text" name="title" id='task'  onChange={onChangeTaskValue} />
+        <label htmlFor="description">Description</label>
+        <textarea placeholder="e.g, study for the test" name="description" onChange={onChangeDescritionValue}  id="description" cols="30" rows="10"></textarea>
         <div className="checkbox-wrapper">
+        
           <input
             type="checkbox"
             id="important"

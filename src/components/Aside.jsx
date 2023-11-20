@@ -1,8 +1,10 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 const Aside = ({ popUpSwitchOn }) => {
   return (
     <aside className="aside">
+      <div class="aside-content">
       <button onClick={popUpSwitchOn} type="button">
         Add a Task
       </button>
@@ -19,6 +21,7 @@ const Aside = ({ popUpSwitchOn }) => {
           </li>
         </ul>
       </nav>
+      </div>
     </aside>
   );
 };
