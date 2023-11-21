@@ -6,6 +6,11 @@ import Aside from "./components/Aside";
 import "./App.css";
 import AddTodo from "./components/AddTodo";
 
+
+
+
+
+
 function App() {
   const [todo, setTodo] = useState(todos);
   const [popUp, setPopUp] = useState(false);
@@ -35,7 +40,6 @@ function App() {
 
   const editTask = (taskId, taskData)=>{
     setTodo(state=>state.map(x=> x.id===taskId ? taskData : x ))
-    console.log(todo)
   }
 
   return (

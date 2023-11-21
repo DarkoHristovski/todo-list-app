@@ -29,8 +29,9 @@ p {
 
 }
 
+
 .aside {
-  background: #007bff;
+  background: #6c7a89;
   color: #fff;
   width: 100%;
 }
@@ -49,7 +50,7 @@ p {
 .aside-content button {
   width: 90%;
   background-color: #fff;
-  color: #007bff;
+  color: #6c7a89;
   border: 1px solid #fff;
   padding: 15px;
   border-radius: 6px;
@@ -60,7 +61,7 @@ p {
 
 
 .aside-content button:hover {
-  background-color: #007bff;
+  background-color: #6c7a89;
   color: #fff;
 }
 
@@ -73,14 +74,14 @@ p {
   width: 100%;
   background-color: #f7f8fa;
   list-style: none;
-  border: 1px solid #007bff;
+  border: 1px solid #6c7a89;
 }
 
 .aside-content nav li a {
   display: block;
   text-decoration: none;
   padding: 20px 10px;
-  color: #007bff;
+  color: #6c7a89;
 }
 
 .todo-item {
@@ -89,7 +90,14 @@ p {
   justify-content: space-between;
   flex-direction: column;
   align-items: flex-start;
+}
 
+.todo-item h3{
+  text-align: left;
+}
+
+.escription-paragraph{
+  margin-top: 30px;
 }
 
 .main {
@@ -101,7 +109,7 @@ p {
 }
 
 .main-wrapper {
-  grid-gap: 10px;
+  grid-gap: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -112,7 +120,7 @@ p {
   color: #364a6c;
   background-color: #fff;
   border-radius: 8px;
-  padding: 30px 20px;
+  padding:20px 20px 15px 20px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -149,6 +157,9 @@ p {
 .pop-up form textarea,
 .pop-up form button {
   width: 100%;
+}
+.pop-up form input[type='date']{
+  padding:10px;
 }
 
 .pop-up form input[type='text'] {
@@ -246,8 +257,23 @@ p {
 }
 
 
-
-
+.calendar{
+margin-top: 40px;
+border-bottom: 1px dotted black;
+width: 100%;
+display: flex;
+align-items: center;
+}
+.calendar p{
+  margin-bottom: 5px;
+  display:flex;
+  align-items: baseline;
+}
+.calendar span{
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 8px;
+}
 
 
 
@@ -312,7 +338,7 @@ p {
     width: 100%;
     background-color: transparent;
     list-style: none;
-    border: 1px solid #007bff;
+    border: 1px solid #6c7a89;
   }
 }
 
