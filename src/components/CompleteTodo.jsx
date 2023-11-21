@@ -11,20 +11,23 @@ const CompleteTodo = ({ content, deleteTask, editTask, setTodo }) => {
   const [editPopUp, setEditPopUp] = useState(false);
   const [completed, setCompleted] = useState(content.completed);
   const [important, setImportant] = useState(content.important);
-
+  
+  
   const completedHandler = (e) => {
-    setCompleted((state) => !state);
+    e.preventDefault;
+    setCompleted(state => !state);
 
     let newObj = {
       ...content,
-      completed: completed,
+      completed: !completed,
     };
     editTask(content.id, newObj);
+    {console.log(important)}
   };
 
   const importantHandler = (e) =>{
     e.preventDefault;
-    setImportant((state) => !state)
+    setImportant(state => !state)
     let newObj = {
         ...content,
         important:important
@@ -32,7 +35,7 @@ const CompleteTodo = ({ content, deleteTask, editTask, setTodo }) => {
     editTask(content.id, newObj);
   }
 
-  
+ 
 
   const deleteHandler = (taskId) => {
     deleteTask(taskId);
@@ -55,8 +58,10 @@ const CompleteTodo = ({ content, deleteTask, editTask, setTodo }) => {
       )}
       <div className="todo-item">
         <h3>{content.task}</h3>
-        <p>{content.description}</p>
-        <p>{content.dueDate}</p>
+        <p className="description-paragraph">{content.description}</p>
+        <div className="calendar">
+          <p><i class="fa-solid fa-calendar-days fa-xl"></i><span>{content.date}</span></p>
+        </div>
         <div className="todo-bottom">
           <button
             onClick={completedHandler}

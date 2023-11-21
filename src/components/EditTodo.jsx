@@ -49,6 +49,8 @@ let onChangeValue=(e)=>{
           cols="30"
           rows="10"
         ></textarea>
+         <label htmlFor="date">Date</label>
+        <input type="date" className="w-full" required="" min="2023-11-20" max="2024-11-20" value="2023-11-20"></input>
         <div className="checkbox-wrapper">
           <input
             type="checkbox"
